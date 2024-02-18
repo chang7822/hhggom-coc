@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react-swc';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  base: '/hhggom-coc/',
   server: {
     proxy: {
       // API 요청을 '/v1/...' 경로로 보낼 경우, 이를 'https://api.clashofclans.com/v1/...'로 프록시합니다.

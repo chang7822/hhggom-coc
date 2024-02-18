@@ -40,7 +40,9 @@ function App() {
 
   const init = async () => {
     try {
-      const response = await fetch(`/v1/clans/%238QQYGRGQ/currentwar`, { method: 'GET', headers: headers });
+      const response = await fetch(`/api/v1/clans/%238QQYGRGQ/currentwar`, {
+        method: 'GET', headers: headers
+      });
       const data = await response.json();
       let current_war_data = await getData(data);
       setWarData(current_war_data);
