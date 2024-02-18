@@ -37,10 +37,11 @@ function App() {
     'Authorization': `Bearer ${import.meta.env.VITE_APP_API_KEY}`,
     'Accept': 'application/json'
   };
+  const API_BASE_URL = import.meta.env.VITE_APP_API_BASE_URL;
 
   const init = async () => {
     try {
-      const response = await fetch(`/api/v1/clans/%238QQYGRGQ/currentwar`, {
+      const response = await fetch(`${API_BASE_URL}/v1/clans/%238QQYGRGQ/currentwar`, {
         method: 'GET', headers: headers
       });
       const data = await response.json();
