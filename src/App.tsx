@@ -76,11 +76,11 @@ function App() {
           <span style={{ fontWeight: "bold", fontSize: 30, lineHeight: 2, color: "red" }}>{
             (warData.find(member => member.name === "키킼")?.point ?? 0)
             + (warData.find(member => member.name === "샤이니즘")?.point ?? 0)
-            + (warData.find(member => member.name === "taker")?.point ?? 0)
+            + (warData.find(member => member.name === "Taker")?.point ?? 0)
           }</span>
           <span>  ( {(warData.find(member => member.name === "키킼")?.point ?? 0)}
             + {(warData.find(member => member.name === "샤이니즘")?.point ?? 0)}
-            + {(warData.find(member => member.name === "taker")?.point ?? 0)} )</span>
+            + {(warData.find(member => member.name === "Taker")?.point ?? 0)} )</span>
           <br />
           <span style={{ fontWeight: "bold", fontSize: 25, lineHeight: 2 }}>현차팀 (흑곰, 리만, 다날라간다잉) : </span>
           <span style={{ fontWeight: "bold", fontSize: 30, lineHeight: 2, color: "red" }}>{
