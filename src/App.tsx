@@ -37,9 +37,14 @@ function App() {
     'Accept': 'application/json'
   };
 
+  // 개발 환경인지 확인하여 기본 URL 설정
+  // const isDevelopment = import.meta.env.DEV;
+  // const apiBaseUrl = "https://api.clashofclans.com"
+  const PROXY = window.location.hostname === 'localhost' ? '' : '/api';
+
   const init = async () => {
     try {
-      const current_war = await (await fetch(`/v1/clans/${clanTag}/currentwar`, { method: 'GET', headers: headers })).json();
+      const current_war = await (await fetch(`${PROXY}/v1/clans/${clanTag}/currentwar`, { method: 'GET', headers: headers })).json();
       let current_war_data = await getData(current_war);
       // console.log(current_war_data);
       setWarData(current_war_data);
