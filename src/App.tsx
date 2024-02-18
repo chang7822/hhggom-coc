@@ -31,17 +31,16 @@ function App() {
   const [isLoading, setLoading] = useState(true);
   const [warData, setWarData] = useState<any[]>([]);
 
-  const clanTag = import.meta.env.VITE_APP_CLAN_TAG;
-  // const headers = {
-  //   'Authorization': `Bearer ${import.meta.env.VITE_APP_API_KEY}`,
-  //   'Accept': 'application/json'
-  // };
 
-  // const PROXY = window.location.hostname === 'localhost' ? '' : '/api';
+  // const clanTag = import.meta.env.VITE_APP_CLAN_TAG;
+  const headers = {
+    'Authorization': `Bearer ${import.meta.env.VITE_APP_API_KEY}`,
+    'Accept': 'application/json'
+  };
 
   const init = async () => {
     try {
-      const response = await fetch(`/api/api-proxy?clanTag=${clanTag}`);
+      const response = await fetch(`/v1/clans/%238QQYGRGQ/currentwar`, { method: 'GET', headers: headers });
       const data = await response.json();
       let current_war_data = await getData(data);
       setWarData(current_war_data);
