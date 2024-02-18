@@ -1,0 +1,40 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    /* 세로 방향으로 자식 요소를 배치 */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    /* 가운데 정렬 */
+    min-width: 900px;
+    /* 컨테이너의 최대 너비 */
+    background-color: #e0e0e0;
+    /* 배경색 */
+    color: #333;
+    /* 글자색 */
+}
+
+.section {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* 첫 번째 줄에 해당하는 첫 번째 섹션 */
+.firstSection {
+    flex: 0 0 auto;
+    /* 크기 조정 없이 내용물 크기에 맞춤 */
+}
+
+/* 두 번째 줄에 해당하는 나머지 섹션들을 감싸는 컨테이너 */
+.secondRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 2~5번째 섹션에 해당하는 스타일 */
+.middleSections {
+    flex: 1;
+    margin: 0 10px;
+    /* 섹션 사이의 간격 */
+}
